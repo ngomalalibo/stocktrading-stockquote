@@ -1,0 +1,49 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: true
+    stream:
+      bindings:
+        input:
+          destination: clientChangeTopic
+          content-type: application/json
+          group: stockGroup
+      kafka:
+        binder:
+          zkNodes: 18.195.186.89
+          brokers: 18.195.186.89
+  zipkin:
+    base-url: ${ZIPKIN_URI}
+  sleuth:
+    sampler:
+      probability: 1.0
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: 18.195.70.159:customer:8085
+    ip-address: 18.195.70.159
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_URI}
+    enabled: true
+    region: eu-central-1
+
+server:
+  port: 8085
+
+security:
+  oauth2:
+    authorization:
+      check-token-access: isAuthenticated()
+    client:
+      client-id: stocktrading
+      client-secret: thisissecret
+    resource:
+      user-info-uri: ${AUTH_URI}
+
+signing:
+  key: 345345fsdgsf5345
