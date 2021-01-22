@@ -270,7 +270,7 @@
 
                     <!-- Login and Push the image to a docker repo. -->
                     <execution>
-                        <id>docker-login</id>
+                        <id>docker-logout</id>
                         <phase>install</phase>
                         <goals>
                             <goal>exec</goal>
