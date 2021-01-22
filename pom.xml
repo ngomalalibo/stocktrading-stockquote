@@ -262,14 +262,27 @@
                             <arguments>
                                 <argument>tag</argument>
                                 <argument>stockquote</argument>
-                                <argument>ngomalalibo/stockquote:latest</argument>
+                                <argument>ngomalalibo/stockquote</argument>
                             </arguments>
                         </configuration>
                     </execution>
 
 
                     <!-- Login and Push the image to a docker repo. -->
-                    <!--<execution>
+                    <execution>
+                        <id>docker-login</id>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>docker</executable>
+                            <arguments>
+                                <argument>logout</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>docker-login</id>
                         <phase>install</phase>
                         <goals>
@@ -287,7 +300,7 @@
                                 <argument>docker.io</argument>
                             </arguments>
                         </configuration>
-                    </execution>-->
+                    </execution>
                     <execution>
                         <id>docker-push</id>
                         <phase>install</phase>
