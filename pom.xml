@@ -243,7 +243,7 @@
                                 <argument>build</argument>
                                 <argument>--rm</argument>
                                 <argument>-t</argument>
-                                <argument>stockquote:latest</argument>
+                                <argument>authservice:latest</argument>
                                 <argument>.</argument>
                             </arguments>
                         </configuration>
@@ -261,27 +261,13 @@
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>tag</argument>
-                                <argument>stockquote</argument>
-                                <argument>ngomalalibo/stockquote</argument>
+                                <argument>authservice</argument>
+                                <argument>ngomalalibo/authservice:latest</argument>
                             </arguments>
                         </configuration>
                     </execution>
-
 
                     <!-- Login and Push the image to a docker repo. -->
-                    <execution>
-                        <id>docker-logout</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>docker</executable>
-                            <arguments>
-                                <argument>logout</argument>
-                            </arguments>
-                        </configuration>
-                    </execution>
                     <execution>
                         <id>docker-login</id>
                         <phase>install</phase>
@@ -312,7 +298,7 @@
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>push</argument>
-                                <argument>ngomalalibo/stockquote</argument>
+                                <argument>ngomalalibo/authservice</argument>
                             </arguments>
                         </configuration>
                     </execution>
