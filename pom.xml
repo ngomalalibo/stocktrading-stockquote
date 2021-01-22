@@ -269,7 +269,7 @@
 
 
                     <!-- Login and Push the image to a docker repo. -->
-                    <execution>
+                    <!--<execution>
                         <id>docker-login</id>
                         <phase>install</phase>
                         <goals>
@@ -287,7 +287,7 @@
                                 <argument>docker.io</argument>
                             </arguments>
                         </configuration>
-                    </execution>
+                    </execution>-->
                     <execution>
                         <id>docker-push</id>
                         <phase>install</phase>
