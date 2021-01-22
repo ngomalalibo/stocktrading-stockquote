@@ -3,5 +3,5 @@ ssh -i "all-stock-key-pair.pem" ubuntu@ec2-3-120-98-15.eu-central-1.compute.amaz
 cd kafka_2.12-2.5.0/
 kafka-server-stop.sh
 zookeeper-server-stop.sh
-zookeeper-server-start.sh config/zookeeper.properties
-kafka-server-start.sh config/server.properties
+nohup zookeeper-server-start.sh config/zookeeper.properties &
+nohup kafka-server-start.sh config/server.properties &
