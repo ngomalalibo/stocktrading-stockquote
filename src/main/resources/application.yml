@@ -11,8 +11,8 @@ spring:
           group: stockGroup
       kafka:
         binder:
-          zkNodes: 3.120.98.15
-          brokers: 3.120.98.15
+          zkNodes: ${KAFKA_IP}
+          brokers: ${KAFKA_IP}
   zipkin:
     base-url: ${ZIPKIN_URI}
   sleuth:
@@ -22,8 +22,8 @@ spring:
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: 18.195.70.159:customer:8085
-    ip-address: 18.195.70.159
+    instance-id: ${STOCKQUOTE_IP}:stockquote:8085
+    ip-address: ${STOCKQUOTE_IP}
   client:
     register-with-eureka: true
     fetch-registry: true
