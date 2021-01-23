@@ -164,7 +164,7 @@ public class StockquoteApplication extends SpringBootServletInitializer
         b.setSecureVirtualHostName("stockquote");
         b.setAppname("stockquote");
         b.setNonSecurePort(8085);
-        b.setInstanceId("3.64.125.172:stockquote:8085");
+        b.setInstanceId(System.getenv("STOCKQUOTE_IP") + ":stockquote:8085");
         b.setPreferIpAddress(true);
         return b;
     }
