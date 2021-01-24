@@ -258,7 +258,7 @@
                                 <argument>build</argument>
                                 <argument>--rm</argument>
                                 <argument>-t</argument>
-                                <argument>authservice:latest</argument>
+                                <argument>stockquote:latest</argument>
                                 <argument>.</argument>
                             </arguments>
                         </configuration>
@@ -276,8 +276,8 @@
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>tag</argument>
-                                <argument>authservice</argument>
-                                <argument>ngomalalibo/authservice:latest</argument>
+                                <argument>stockquote</argument>
+                                <argument>ngomalalibo/stockquote:latest</argument>
                             </arguments>
                         </configuration>
                     </execution>
@@ -313,7 +313,7 @@
                             <workingDirectory>${project.basedir}</workingDirectory>
                             <arguments>
                                 <argument>push</argument>
-                                <argument>ngomalalibo/authservice</argument>
+                                <argument>ngomalalibo/stockquote</argument>
                             </arguments>
                         </configuration>
                     </execution>
